@@ -43,7 +43,16 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '300px',
-    }
+    },
+    loadingDivTableCell: {
+        border: 'none'
+    },
+    primaryTableCell: {
+        width: '60%',
+    },
+    secondaryTableCell: {
+        width: '20%',
+    },
 });
 
 export function SWPeopleGrid(props) {
@@ -68,9 +77,9 @@ export function SWPeopleGrid(props) {
                     <Table className={classes.table} size="small">
                         <TableHead className={classes.tableHeader}>
                             <TableRow>
-                                <TableCell style={{ width: '60%' }}>Name</TableCell>
-                                <TableCell align="right" style={{ width: '20%' }}>Height (cm)</TableCell>
-                                <TableCell align="right" style={{ width: '20%' }}>Mass (kg)</TableCell>
+                                <TableCell className={classes.primaryTableCell}>Name</TableCell>
+                                <TableCell align="right" className={classes.secondaryTableCell}>Height (cm)</TableCell>
+                                <TableCell align="right" className={classes.secondaryTableCell}>Mass (kg)</TableCell>
                             </TableRow>
                         </TableHead>
                         {!isGridLoading ? <TableBody>
@@ -86,7 +95,7 @@ export function SWPeopleGrid(props) {
                         </TableBody> :
                             <TableBody>
                                 <TableRow>
-                                    <TableCell colSpan={3} style={{border:'none'}}>
+                                    <TableCell colSpan={3} className={classes.loadingDivTableCell}>
                                         <div className={classes.loadingDiv}>
                                             <CircularProgress />
                                         </div>

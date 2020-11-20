@@ -1,11 +1,7 @@
-import React, {
-  useEffect
-}
-  from 'react';
-import {
-  useSelector
-  , useDispatch
-} from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { SWPeopleGrid } from './SWPeopleGrid';
+import { SWCharacterDetails } from './SWCharacterDetails';
 import {
   loadPeopleData,
   loadCharDetails,
@@ -14,8 +10,6 @@ import {
   selectGridLoading,
   selectCharDetailsLoading,
 } from './starWarsSlice';
-import { SWPeopleGrid } from './SWPeopleGrid';
-import { SWCharacterDetails } from './SWCharacterDetails';
 
 export function StarWars() {
   const peopleData = useSelector(selectPeopleData);
@@ -36,7 +30,7 @@ export function StarWars() {
 
   // Load details of selected character
   const fetchCharDetails = (char) => {
-    if(char.name !== charDetails.name)
+    if (char.name !== charDetails.name)
       dispatch(loadCharDetails(char));
   }
 

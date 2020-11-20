@@ -33,6 +33,9 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '200px',
+    },
+    capitalizeDiv: {
+        textTransform: 'capitalize'
     }
 });
 
@@ -60,7 +63,7 @@ export function SWCharacterDetails(props) {
                             <Typography className={classes.detailLabel} component="span">Birth Year: </Typography>
                             {charDetails.birthYear}
                         </div>
-                        <div style={{ textTransform: 'capitalize' }}>
+                        <div className={classes.capitalizeDiv}>
                             <Typography className={classes.detailLabel} component="span">Gender: </Typography>
                             {charDetails.gender}
                         </div>
