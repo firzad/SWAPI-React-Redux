@@ -1,6 +1,7 @@
 # Star-Wars-API-React-Redux
 Coding Challenge from Sympli
 
+This project is built using React and Redux, consumes the [StarWars API](https://swapi.dev/)
 
 To run the Project, please follow the following steps.
 
@@ -28,9 +29,4 @@ Make sure that the following port is not in use:
 
 * 3000: React Server
 
-------------------
 
-
-https://swapi.dev/
-
-The app uses Star Wars API.
