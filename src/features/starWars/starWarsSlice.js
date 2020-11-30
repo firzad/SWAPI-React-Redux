@@ -73,9 +73,9 @@ export const loadCharDetails = (char) => dispatch => {
 // The function below is called a selector and allows us to select a 'field' from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.starWars.field)`
-export const selectPeopleData = state => state.starWars.peopleData;
-export const selectCharDetails = state => state.starWars.charDetails;
-export const selectGridLoading = state => state.starWars.isGridLoading;
-export const selectCharDetailsLoading = state => state.starWars.isCharDetailsLoading;
+export const selectPeopleData = reducerState => reducerState.starWarsReducer.peopleData;
+export const selectCharDetails = reducerState => reducerState.starWarsReducer.charDetails;
+export const selectGridLoading = reducerState => reducerState.starWarsReducer.isGridLoading;
+export const selectCharDetailsLoading = reducerState => reducerState.starWarsReducer.isCharDetailsLoading;
 
 export default starWarsSlice.reducer;
